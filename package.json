@@ -1,7 +1,7 @@
 {
   "name": "chatgpt-mac",
   "productName": "chatgpt-mac",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A menu bar application for ChatGPT on macOS.",
   "main": "main.js",
   "license": "MIT",
