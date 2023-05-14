@@ -70,27 +70,38 @@ app.on("ready", () => {
         click: () => {
           shell.openExternal("https://github.com/LIjiAngChen8/ChatGPT-Mac");
         },
-      }
+      },
     ];
 
     tray.on("right-click", () => {
-      menuBar.tray.popUpContextMenu(Menu.buildFromTemplate(contextMenuTemplate));
+      menuBar.tray.popUpContextMenu(
+        Menu.buildFromTemplate(contextMenuTemplate)
+      );
     });
 
     tray.on("click", (e) => {
       if (e.ctrlKey || e.metaKey) {
-        menuBar.tray.popUpContextMenu(Menu.buildFromTemplate(contextMenuTemplate));
+        menuBar.tray.popUpContextMenu(
+          Menu.buildFromTemplate(contextMenuTemplate)
+        );
       }
     });
 
     const menu = new Menu();
-    menu.append(new MenuItem({
-      label: '关闭弹窗',
-      submenu: [{
-        role: 'exit',
-        accelerator: 'Esc', click: () => { menuBar.hideWindow() }
-      }]
-    }));
+    menu.append(
+      new MenuItem({
+        label: "关闭弹窗",
+        submenu: [
+          {
+            role: "exit",
+            accelerator: "Esc",
+            click: () => {
+              menuBar.hideWindow();
+            },
+          },
+        ],
+      })
+    );
 
     globalShortcut.register("CommandOrControl+Shift+g", () => {
       if (window.isVisible()) {
@@ -141,6 +152,7 @@ app.on("ready", () => {
     "true"
   );
 });
+
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();
