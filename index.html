@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>ChatGPT For Mac</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="content-container">
+    <webview id="webview" src="https://chat.openai.com/chat" autosize="on" />
+  </div>
+
+  <script>
+    const webview = document.getElementById('webview');
+    webview.addEventListener('dom-ready', function () {
+
+      webview.insertCSS(`
+        .text-xs.text-center {
+          opacity: 0;
+          height: 0;
+          margin-bottom: -10px;
+        }
+        
+        .sticky,
+        .pointer-events-auto.flex.border-orange-500,
+        [class*="shared__Capabilities"] {
+          display: none !important;
+        }
+
+        [class*="shared__Wrapper"] {
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          margin-top: 15vh;
+        }
+
+        [class*="shared__Wrapper"] h3 {
+          margin-top: -40px;
+          font-size: 20px;
+        }
+      `)
+    });
+
+  </script>
+</body>
+
+</html>

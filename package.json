@@ -1,0 +1,36 @@
+{
+  "name": "chatgpt-mac",
+  "productName": "chatgpt-mac",
+  "version": "0.1.1",
+  "description": "A menu bar application for ChatGPT on macOS.",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder -c config.js"
+  },
+  "keywords": [
+    "chatgpt-mac",
+    "chatgpt",
+    "openai",
+    "mac"
+  ],
+  "author": {
+    "name": "LIjiAngChen8",
+    "email": "SpaceCode@foxmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LIjiAngChen8/ChatGPT-Mac"
+  },
+  "dependencies": {
+    "electron-context-menu": "^3.6.1",
+    "menubar": "^9.3.0",
+    "update-electron-app": "^2.0.1"
+  },
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
