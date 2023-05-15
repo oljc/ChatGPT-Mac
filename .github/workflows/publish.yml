@@ -1,0 +1,42 @@
+name: Release
+
+on:
+  push:
+    branches: 
+      - main
+    paths-ignore:
+      - LICENSE
+      - README.md
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+       - name: Checkout
+         uses: actions/checkout@v3
+        
+       - name: Node
+         uses: actions/setup-node@v3
+         with:
+          node-version: 16.x
+          cache: 'npm'
+          
+       - name: Cache
+         id: cache-dependencies
+         uses: actions/cache@v3
+         with:
+           path: |
+             **/node_modules
+           key: ${{runner.OS}}-${{hashFiles('**/package-lock')}}
+          
+       - name: Install
+         if: steps.cache-dependencies.outputs.cache-hit != 'true'
+         run: npm install
+
+       - name: Build
+         run: npm run build
+         env:
+           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+       - name: Cleanup Artifacts
+         run: |
+          npx rimraf "dist/!(*.dmg)"
