@@ -1,6 +1,6 @@
 <h4 align="right"><a href="https://github.com/LIjiAngChen8/ChatGPT-Mac/README.md">English</a> | <strong>简体中文</strong></h4>
 <p align="center">
-    <img src="./docs/white.png" width="130"  style="display: inline-block; border-radius: 50%; background-color: #165DFF; box-shadow: 0 0 0 rgba(22, 93, 255, 0.6); animation: pulse 2s infinite;"/>
+    <img src="./docs/white.png" width="160" />
 </p>
 <h1 align="center">ChatGPT for Mac</h1>
 <p align="center"><strong>让ChatGPT 更轻便简洁的运行在你的MacOs 
@@ -53,19 +53,4 @@
 </a>
 ## License
 [MIT 协议](./LICENSE)
-  
 
-
-<style>
-    @keyframes pulse {
-        0% {
-            box-shadow: 0 0 0 0 rgba(22, 93, 255, 0.5);
-        }
-        50% {
-            box-shadow: 0 0 20px 10px rgba(22, 93, 255, 0.5);
-        }
-        100% {
-            box-shadow: 0 0 0 0 rgba(22, 93, 255, 0.5);
-        }
-    }
-</style>
