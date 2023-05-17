@@ -1,4 +1,8 @@
-<h4 align="right"><a href="https://github.com/LIjiAngChen8/ChatGPT-Mac/README.md">English</a> | <strong>简体中文</strong></h4>
+<h4 align="right">
+
+   [English](README.md)
+   | <strong>简体中文</strong>
+</h4>
 <p align="center">
     <img src="./docs/white.png" width="160" />
 </p>
