@@ -10,13 +10,15 @@ const {
   Menu,
   globalShortcut,
   shell,
+  screen,
   MenuItem,
 } = require("electron");
 const contextMenu = require("electron-context-menu");
 
 const image = nativeImage.createFromPath(
-  path.join(__dirname, `icons/newiconTemplate.png`)
+  path.join(__dirname, `icons/iconTemplate.png`)
 );
+
 
 app.on("ready", () => {
   const tray = new Tray(image);
@@ -24,10 +26,11 @@ app.on("ready", () => {
   const menuBar = menubar({
     browserWindow: {
       icon: image,
-      transparent: path.join(__dirname, `icons/iconApp.png`),
       webPreferences: {
         webviewTag: true,
       },
+      show: false,
+      frame: false,
       width: 440,
       height: 650,
     },
@@ -41,13 +44,60 @@ app.on("ready", () => {
   menuBar.on("ready", () => {
     const { window } = menuBar;
 
-    if (process.platform !== "darwin") {
-      window.setSkipTaskbar(true);
-    } else {
+    if (process.platform == "darwin") {
       app.dock.hide();
+    } else {
+      window.setSkipTaskbar(true);
     }
 
     const contextMenuTemplate = [
+      {
+        label: "🚀重新加载",
+        accelerator: "Command+R",
+        click: () => {
+          window.reload();
+        },
+      },
+      {
+        label: "🏷️默认大小",
+        submenu: [
+          {
+            label: "全屏",
+            click: () => {
+              const { width, height } = screen.getPrimaryDisplay().workAreaSize;
+              window.setSize(width, height, true);
+            },
+          },
+          {
+            label: "显示菜单栏",
+            click: () => {
+              window.setSize(888, 620, true);
+            },
+          },
+          {
+            label: "小屏",
+            click: () => {
+              window.setSize(440, 650, true);
+            },
+          },
+        ],
+      },
+      {
+        label: "🌐浏览器打开",
+        accelerator: "Command+O",
+        click: () => {
+          shell.openExternal("https://chat.openai.com/chat");
+        },
+      },
+      {
+        type: "separator",
+      },
+      {
+        label: "GitHub 🪼",
+        click: () => {
+          shell.openExternal("https://github.com/LIjiAngChen8/ChatGPT-Mac");
+        },
+      },
       {
         label: "退出",
         accelerator: "Command+Q",
@@ -56,21 +106,9 @@ app.on("ready", () => {
         },
       },
       {
-        label: "重新加载",
-        accelerator: "Command+R",
-        click: () => {
-          window.reload();
-        },
-      },
-      {
-        type: "separator",
-      },
-      {
-        label: "GitHub",
-        click: () => {
-          shell.openExternal("https://github.com/LIjiAngChen8/ChatGPT-Mac");
-        },
-      },
+        label: `应用版本：${app.getVersion()}`,
+        enabled: false
+      }
     ];
 
     tray.on("right-click", () => {
@@ -129,6 +167,12 @@ app.on("ready", () => {
       });
       contents.on("before-input-event", (event, input) => {
         const { control, meta, key } = input;
+        if (input.type !== "keyDown" && key == "Enter") {
+          if (input.shift) return;
+          contents.executeJavaScript(
+            `document.querySelector('main form button').click()`
+          );
+        };
         if (!control && !meta) return;
         if (key === "c") contents.copy();
         if (key === "v") contents.paste();

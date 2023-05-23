@@ -6,7 +6,9 @@
 </h4>
 
 <p align="center">
-    <img src="./docs/white.png" width="160" />
+      <a href="https://github.com/LIjiAngChen8/ChatGPT-Mac" target="_blank">
+        <img src="./docs/white.png" width="160" />
+      </a>
 </p>
 
 <h1 align="center">ChatGPT for Mac</h1>
@@ -14,9 +16,10 @@
 
 About application download and installation, custom development, and preview, Check out README. You are also welcome to submit issues and pull requests.Welcome Contributing!
 
-<div align="center"> 
-    <a href="https://github.com/LIjiAngChen8/ChatGPT-Mac/releases" target="_blank">
-    <img alt="Release" src="https://img.shields.io/github/release/LIjiAngChen8/ChatGPT-Mac"></a>
+<div align="center">
+
+   [![Release](https://github.com/LIjiAngChen8/ChatGPT-Mac/actions/workflows/release.yml/badge.svg)](https://github.com/LIjiAngChen8/ChatGPT-Mac/actions/workflows/release.yml)
+    [![Latest](https://img.shields.io/github/release/LIjiAngChen8/ChatGPT-Mac.svg)](https://github.com/LIjiAngChen8/ChatGPT-Mac/releases/latest)
     <a href="https://github.com/LIjiAngChen8/ChatGPT-Mac/commits" target="_blank">
     <img alt="Commit" src="https://img.shields.io/github/commit-activity/m/LIjiAngChen8/ChatGPT-Mac"></a>
     <a href="https://github.com/LIjiAngChen8/ChatGPT-Mac/issues" target="_blank">

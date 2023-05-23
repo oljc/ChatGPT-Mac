@@ -4,7 +4,9 @@
    | <strong>简体中文</strong>
 </h4>
 <p align="center">
-    <img src="./docs/white.png" width="160" />
+    <a href="https://github.com/LIjiAngChen8/ChatGPT-Mac" target="_blank">
+        <img src="./docs/white.png" width="160" />
+    </a>
 </p>
 <h1 align="center">ChatGPT for Mac</h1>
 <p align="center"><strong>让ChatGPT 更轻便简洁的运行在你的MacOs 
@@ -14,8 +16,9 @@
 。期待您的共同参与！
 
 <div align="center"> 
-    <a href="https://github.com/LIjiAngChen8/ChatGPT-Mac/releases" target="_blank">
-    <img alt="Release" src="https://img.shields.io/github/release/LIjiAngChen8/ChatGPT-Mac"></a>
+
+   [![Release](https://github.com/LIjiAngChen8/ChatGPT-Mac/actions/workflows/release.yml/badge.svg)](https://github.com/LIjiAngChen8/ChatGPT-Mac/actions/workflows/release.yml)
+    [![Latest](https://img.shields.io/github/release/LIjiAngChen8/ChatGPT-Mac.svg)](https://github.com/LIjiAngChen8/ChatGPT-Mac/releases/latest)
     <a href="https://github.com/LIjiAngChen8/ChatGPT-Mac/commits" target="_blank">
     <img alt="Commit" src="https://img.shields.io/github/commit-activity/m/LIjiAngChen8/ChatGPT-Mac"></a>
     <a href="https://github.com/LIjiAngChen8/ChatGPT-Mac/issues" target="_blank">

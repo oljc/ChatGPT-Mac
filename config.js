@@ -27,7 +27,8 @@ module.exports = {
     hardenedRuntime: true,
     gatekeeperAssess: false,
     extendInfo: {
-      LSUIElement: "true",
+      LSBackgroundOnly: 1,
+      LSUIElement: 1,
     },
   },
 };
