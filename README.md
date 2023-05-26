@@ -35,8 +35,8 @@ About application download and installation, custom development, and preview, Ch
 
 | 💻 System         |  🔗 Download            |
 |----------------|----------------------|
-| macOS Arm64    | [ChatGPT-0.3.1-arm64.dmg](https://github.com/LIjiAngChen8/ChatGPT-Mac/releases/download/v0.3.1/ChatGPT-0.3.1-arm64.dmg)   |
-| macOS Intel    | [ChatGPT-0.3.1.dmg](https://github.com/LIjiAngChen8/ChatGPT-Mac/releases/download/v0.3.1/ChatGPT-0.3.1.dmg)     |
+| macOS Arm64    | [ChatGPT-0.4.3-arm64.dmg](https://github.com/LIjiAngChen8/ChatGPT-Mac/releases/download/v0.4.3/ChatGPT-0.4.3-arm64.dmg)   |
+| macOS Intel    | [ChatGPT-0.4.3.dmg](https://github.com/LIjiAngChen8/ChatGPT-Mac/releases/download/v0.4.3/ChatGPT-0.4.3.dmg)     |
 
 [More release](https://github.com/LIjiAngChen8/ChatGPT-Mac/releases)
 

@@ -36,8 +36,8 @@
 
 | 💻 系统         |  🔗 下载链接            |
 |----------------|----------------------|
-| macOS Arm64    |      |
-| macOS Intel    |      |
+| macOS Arm64    | [ChatGPT-0.4.3-arm64.dmg](https://github.com/LIjiAngChen8/ChatGPT-Mac/releases/download/v0.4.3/ChatGPT-0.4.3-arm64.dmg)   |
+| macOS Intel    | [ChatGPT-0.4.3.dmg](https://github.com/LIjiAngChen8/ChatGPT-Mac/releases/download/v0.4.3/ChatGPT-0.4.3.dmg)     |
 
 [查看更多版本](https://github.com/LIjiAngChen8/ChatGPT-Mac/releases)
 
