@@ -166,11 +166,15 @@ app.on("ready", () => {
         window: contents,
       });
       contents.on("before-input-event", (event, input) => {
-        const { control, meta, key } = input;
-        if (input.type !== "keyDown" && key == "Enter") {
-          if (input.shift) return;
-          contents.executeJavaScript(
-            `document.querySelector('main form button').click()`
+        const { control, meta, key, isAutoRepeat, type } = input;
+
+        if (type === "keyDown" && !isAutoRepeat && key === "Enter") {
+          if (input.shift || event.isComposing || event.isAutoRepeat) {
+            return;
+          }
+          contents.executeJavaScript(`
+            const button = document.querySelector('main form button');
+            if (button) { button.click();}`
           );
         };
         if (!control && !meta) return;
